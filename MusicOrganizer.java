@@ -32,6 +32,20 @@ public class MusicOrganizer
     }
     
     /**
+     * List namesof files matching the givensearch string.
+     * @param searchString The string to match.
+     */
+    public void listMatching(String searchString)
+    {
+        for(String filename : files) {
+            if(filename.contains(searchString)){
+                // A match.
+                System.out.println(filename);
+            }
+            }
+    }
+    
+    /**
      * Return the number of files in the collection.
      * @return The number of files in the collection.
      */

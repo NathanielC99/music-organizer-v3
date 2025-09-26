@@ -15,3 +15,6 @@ Create a MusicOrganizer object on the object bench.
 Use its methods to add, remove, and play files. The listAllFiles
 method prints a list of the collection.
 
+**Answers**
+25.Nothing is printed if the name does not match anything in the list.
+28.public void trackList()

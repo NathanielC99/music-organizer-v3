@@ -46,6 +46,26 @@ public class MusicPlayer
         }
     }
     
+    public void playMultipleSamples(String searchString)
+    {
+        for(String filename : files) {
+            if(filename.contains(searchString)){
+                // A match.
+                System.out.println(filename);
+            }
+            }
+        try{
+            setupPlayer(filename);
+            player.play(500);
+        }
+        catch(JavaLayerException e) {
+            reportProblem(filename);
+        }
+        finally {
+            killPlayer();
+        }
+    }
+    
     /**
      * Start playing the given audio file.
      * The method returns once the playing has been started.
